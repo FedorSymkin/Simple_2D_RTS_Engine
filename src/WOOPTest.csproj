@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C9DD4211-1F07-411C-A2A1-1056120AD8BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication1</RootNamespace>
+    <AssemblyName>WOOPTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;JPS_BLOCK_DEBU, WATER_ALG_BLOCK_DEBU, MACRO_PF_DEBU, RETARGET_DEBU</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;JPS_BLOCK_DEBU, WATER_ALG_BLOCK_DEBU, MACRO_PF_DEBU, RETARGET_DEBU</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86" />
+    <Reference Include="QuickGraph">
+      <HintPath>QuickGraph\QuickGraph.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Data">
+      <HintPath>QuickGraph\QuickGraph.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Graphviz">
+      <HintPath>QuickGraph\QuickGraph.Graphviz.dll</HintPath>
+    </Reference>
+    <Reference Include="QuickGraph.Serialization">
+      <HintPath>QuickGraph\QuickGraph.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WOOP\actions\microactions\WRangeAttakMicroAction.cs" />
+    <Compile Include="WOOP\algorythms\AStar\AStar.cs" />
+    <Compile Include="WOOP\algorythms\DefineGroups\DefineGroups.cs" />
+    <Compile Include="WOOP\InterfaceMaker\InterfaceMaker.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WOOP\actions\commands\WAttackingMoveCommand.cs" />
+    <Compile Include="WOOP\actions\commands\WAttackCommand.cs" />
+    <Compile Include="WOOP\actions\commands\WDeadCommand.cs" />
+    <Compile Include="WOOP\actions\commands\WMoveCommand.cs" />
+    <Compile Include="WOOP\actions\commands\WStopCommand.cs" />
+    <Compile Include="WOOP\actions\microactions\WDeadMicroAction.cs" />
+    <Compile Include="WOOP\actions\microactions\WDecayMicroAction.cs" />
+    <Compile Include="WOOP\actions\microactions\WMoveMicroAction.cs" />
+    <Compile Include="WOOP\actions\microactions\WRerunMicroAction.cs" />
+    <Compile Include="WOOP\actions\microactions\WSimpleAttakMicroAction.cs" />
+    <Compile Include="WOOP\actions\microactions\WStopMicroAction.cs" />
+    <Compile Include="WOOP\algorythms\FibonacciHeap.cs" />
+    <Compile Include="WOOP\algorythms\JumpPathFinder\JumpPathFinder_debug.cs" />
+    <Compile Include="WOOP\algorythms\JumpPathFinder\JumpPathFinder_jumps.cs" />
+    <Compile Include="WOOP\algorythms\JumpPathFinder\JumpPathFinder_body.cs" />
+    <Compile Include="WOOP\algorythms\JumpPathFinder\JumpPathFinder_main.cs" />
+    <Compile Include="WOOP\algorythms\PathCaching\PathCaching.cs" />
+    <Compile Include="WOOP\algorythms\WaterAlg\WWaterAlg.cs" />
+    <Compile Include="WOOP\algorythms\WaterAlg\WWaterAlg_astar.cs" />
+    <Compile Include="WOOP\algorythms\WaterAlg\WWaterAlg_debug.cs" />
+    <Compile Include="WOOP\algorythms\WaterAlg\WWaterAlg_make.cs" />
+    <Compile Include="WOOP\algorythms\WaterAlg\WWaterAlg_other.cs" />
+    <Compile Include="WOOP\debug\BlockingDebug.cs" />
+    <Compile Include="WOOP\debug\debugGraphics.cs" />
+    <Compile Include="WOOP\debug\debugInputKeys.cs" />
+    <Compile Include="WOOP\debug\debugText.cs" />
+    <Compile Include="WOOP\algorythms\PathFinding.cs" />
+    <Compile Include="WOOP\actions\commands\wcommands.cs" />
+    <Compile Include="WOOP\debug\otherDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WOOP\modules\AI\AI.cs" />
+    <Compile Include="WOOP\modules\AI\Controllers\AI_controller.cs" />
+    <Compile Include="WOOP\modules\AI\Controllers\FindAndDestroy\AI_FindAndDestroyAll.cs" />
+    <Compile Include="WOOP\modules\AI\Controllers\FindAndDestroy\AI_FindAndDestroyGroups.cs" />
+    <Compile Include="WOOP\modules\modules_test.cs" />
+    <Compile Include="WOOP\modules\module.cs" />
+    <Compile Include="WOOP\other\CRC32.cs" />
+    <Compile Include="WOOP\other\graph.cs" />
+    <Compile Include="WOOP\other\KeyCapturer.cs" />
+    <Compile Include="WOOP\other\MultiKeyDictionary.cs" />
+    <Compile Include="WOOP\textures\textures_generic.cs" />
+    <Compile Include="WOOP\singletons\shells.cs" />
+    <Compile Include="WOOP\textures\textures_shells.cs" />
+    <Compile Include="WOOP\textures\textures_units.cs" />
+    <Compile Include="WOOP\textures\textures_world.cs" />
+    <Compile Include="WOOP\wcore\wcore_init.cs" />
+    <Compile Include="WOOP\wcore\wcore_interface.cs" />
+    <Compile Include="WOOP\wcore\wcore_main.cs" />
+    <Compile Include="WOOP\userEvents\UserEvents.cs" />
+    <Compile Include="WOOP\wcore\wcore_other.cs" />
+    <Compile Include="WOOP\widgets\WDebugWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\widgets\wgamefield.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\widgets\wmainwidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\actions\microactions\wmicroactions.cs" />
+    <Compile Include="WOOP\widgets\wpanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\widgets\wminimap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\singletons\wplayers.cs" />
+    <Compile Include="WOOP\widgets\WUnitWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\wunit\inheritors\WBuilding.cs" />
+    <Compile Include="WOOP\wunit\inheritors\WRangeAttakingUnit.cs" />
+    <Compile Include="WOOP\wunit\inheritors\WSimpleAttackingUnit.cs" />
+    <Compile Include="WOOP\wunit\inheritors\WMovingUnit.cs" />
+    <Compile Include="WOOP\wunit\wunit_debug.cs" />
+    <Compile Include="WOOP\wunit\wunit_other.cs" />
+    <Compile Include="WOOP\wunit\wunit_playerint.cs" />
+    <Compile Include="WOOP\wunit\wunit_actions.cs" />
+    <Compile Include="WOOP\singletons\wunits.cs" />
+    <Compile Include="WOOP\wunit\wunit_gamepart.cs" />
+    <Compile Include="WOOP\wunit\wunit_graphics.cs" />
+    <Compile Include="WOOP\wunit\wunit_main.cs" />
+    <Compile Include="WOOP\other\wutilites.cs" />
+    <Compile Include="WOOP\singletons\wworld.cs" />
+    <Compile Include="WOOP\WXNA\GraphicsDeviceControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WOOP\WXNA\GraphicsDeviceService.cs" />
+    <Compile Include="WOOP\WXNA\ServiceContainer.cs" />
+    <Compile Include="WOOP\WXNA\WXNA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
